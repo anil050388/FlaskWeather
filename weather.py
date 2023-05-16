@@ -1,10 +1,12 @@
 import requests
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 from dataclasses import dataclass
+from config import get_secret
 
-load_dotenv()
-API_key = os.getenv('MY_KEY')
+API = get_secret()
+API_Key = API['MY_KEY']
+
 
 @dataclass
 class WeatherData:

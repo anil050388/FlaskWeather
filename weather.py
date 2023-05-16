@@ -4,6 +4,7 @@ import os
 from dataclasses import dataclass
 from config import get_secret
 
+#Retrieve API Keys
 API = get_secret()
 API_Key = API['MY_KEY']
 

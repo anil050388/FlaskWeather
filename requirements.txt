@@ -1,5 +1,5 @@
-boto3==1.26.134
-botocore==1.29.99
+boto3
+botocore
 Flask==2.3.2
 flask_wtf==1.1.1
 Requests==2.30.0

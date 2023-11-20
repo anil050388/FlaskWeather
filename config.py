@@ -4,18 +4,17 @@ import json
 import base64
 
 
-AWS_AccountId = '651543716756'
-Role_Name = 'ec2-ssm'
-
-session = boto3.Session()
-sts = session.client("sts")
-response = sts.assume_role(
-    RoleArn = "arn:aws:iam::651543716756:role/ec2-ssm",
-    RoleSessionName="ec2-ssm"
-)
-
 def get_secret():
 
+    AWS_AccountId = '651543716756'
+    Role_Name = 'ec2-ssm'
+    
+    session = boto3.Session()
+    sts = session.client("sts")
+    response = sts.assume_role(
+        RoleArn = "arn:aws:iam::651543716756:role/ec2-ssm",
+        RoleSessionName="ec2-ssm"
+    )
     secret_name = "anilkarnam/weather/key"
     region_name = "us-east-1"
 
